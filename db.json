@@ -1,54 +1,122 @@
-{"pizzas":
-  [
-    { "id": 1,
+{
+  "pizzas": [
+    {
+      "id": 1,
       "topping": "Plain",
       "size": "Small",
       "vegetarian": true
     },
-    { "id": 2,
+    {
+      "id": 2,
       "topping": "Pepperoni",
-      "size": "Small",
+      "size": "Large",
       "vegetarian": false
     },
-    { "id": 3,
+    {
+      "id": 3,
       "topping": "Mushroom",
       "size": "Small",
       "vegetarian": true
     },
-    { "id": 4,
+    {
+      "id": 4,
       "topping": "Sausage",
       "size": "Small",
       "vegetarian": false
     },
-    { "id": 5,
-      "topping": "Bacon",
+    {
+      "id": 5,
+      "topping": "bacon",
       "size": "Medium",
       "vegetarian": false
     },
-    { "id": 6,
+    {
+      "id": 6,
       "topping": "Spinach",
       "size": "Medium",
       "vegetarian": true
     },
-    { "id": 7,
-      "topping": "Black Olive",
-      "size": "Medium",
+    {
+      "id": 7,
+      "topping": "green Olive",
+      "size": "Large",
       "vegetarian": true
     },
-    { "id": 8,
+    {
+      "id": 8,
       "topping": "Pineapple",
       "size": "Medium",
       "vegetarian": true
     },
-    { "id": 9,
+    {
+      "id": 9,
       "topping": "Salami",
       "size": "Large",
       "vegetarian": false
     },
-    { "id": 10,
+    {
+      "id": 10,
       "topping": "Chicken",
       "size": "Large",
       "vegetarian": true
+    },
+    {
+      "topping": "4 cheeses",
+      "size": "large",
+      "vegetarian": true,
+      "id": 11
+    },
+    {
+      "topping": "4 cheeses",
+      "size": "large",
+      "vegetarian": true,
+      "id": 12
+    },
+    {
+      "topping": "rocket",
+      "size": "Medium",
+      "vegetarian": true,
+      "id": 13
+    },
+    {
+      "topping": "beef",
+      "vegetarian": false,
+      "id": 14
+    },
+    {
+      "topping": "bacon",
+      "size": "Large",
+      "vegetarian": false,
+      "id": 15
+    },
+    {
+      "topping": "chorizo",
+      "vegetarian": false,
+      "id": 16
+    },
+    {
+      "topping": "salad",
+      "size": "Medium",
+      "vegetarian": true,
+      "id": 17
+    },
+    {
+      "topping": "bacon",
+      "size": "Small",
+      "vegetarian": true,
+      "id": 18
+    },
+    {
+      "topping": "ham & pineapple",
+      "size": "Medium",
+      "vegetarian": false,
+      "id": 19
+    },
+    {
+      "topping": "all the meats",
+      "size": "Medium",
+      "vegetarian": false,
+      "id": 20
     }
   ]
 }
