@@ -1,27 +1,30 @@
-import React, { Component } from 'react';
-import Pizza from '../components/Pizza'
+import React, { Component } from "react";
+import Pizza from "../components/Pizza";
 class PizzaList extends Component {
-
-  render() {
-    return (
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Topping</th>
-            <th scope="col">Size</th>
-            <th scope="col">Vegetarian?</th>
-            <th scope="col">Edit</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            //render Pizza here
-          }
-        </tbody>
-      </table>
-    );
-  }
-
+	render() {
+		return (
+			<table className="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">Topping</th>
+						<th scope="col">Size</th>
+						<th scope="col">Vegetarian?</th>
+						<th scope="col">Edit</th>
+					</tr>
+				</thead>
+				<tbody>
+					{//render Pizza here
+					this.props.pizzas.map(pizza => (
+						<Pizza
+							pizza={pizza}
+							launchEditForm={() => this.props.launchEditForm(pizza)}
+							key={pizza.id}
+						/>
+					))}
+				</tbody>
+			</table>
+		);
+	}
 }
 
 export default PizzaList;
