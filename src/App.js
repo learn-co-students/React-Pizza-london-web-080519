@@ -5,16 +5,28 @@ import PizzaList from "./containers/PizzaList";
 class App extends Component {
 	state = { pizzas: [], editingPizza: {} };
 
-	componentDidMount() {
-		fetch("http://localhost:3000/pizzas")
+	getPizzas = () => {
+		return fetch("http://localhost:3000/pizzas")
 			.then(resp => resp.json())
 			.then(pizzas => this.setState({ pizzas: pizzas }));
+	};
+
+	componentDidMount() {
+		this.getPizzas();
 	}
 
 	handleFormSubmission = () => {
-		let newPizzaList = this.state.pizzas;
-		newPizzaList[this.state.editingPizza.id - 1] = this.state.editingPizza;
-		this.setState({ pizzas: newPizzaList });
+		// let newPizzaList = this.state.pizzas;
+		// newPizzaList[this.state.editingPizza.id - 1] = this.state.editingPizza;
+		// this.setState({ pizzas: newPizzaList });
+
+		fetch(`http://localhost:3000/pizzas/${this.state.editingPizza.id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(this.state.editingPizza),
+		}).then(resp => this.getPizzas());
 	};
 
 	launchEditForm = pizza => {
